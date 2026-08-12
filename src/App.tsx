@@ -470,12 +470,12 @@ function App() {
 
           <div className="contact-links">
 
-            <a href="mailto:YOUR_EMAIL@example.com">
+            <a href="mailto:bivhor.nirola92@gmail.com">
               Email ↗
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/bivhor-nirola"
               target="_blank"
               rel="noreferrer"
             >
