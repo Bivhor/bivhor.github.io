@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 const skills = [
@@ -7,6 +8,8 @@ const skills = [
   "TypeScript",
   "PHP",
   "REST APIs",
+  "Payment APIs",
+  "Webhooks",
   "PostgreSQL",
   "MySQL",
   "MongoDB",
@@ -24,27 +27,26 @@ const projects = [
     number: "01",
     title: "Event Booking System",
     description:
-      "Backend booking and ticketing workflows including booking states, ticket limits, countdown logic and database-driven content.",
+      "Developed backend functionality for event discovery and ticket booking, including booking states, ticket limits, countdown logic, database-driven content, and server-side tracking.",
     technologies: "Node.js · SQL · REST APIs"
   },
   {
     number: "02",
     title: "Payment & API Troubleshooting",
     description:
-      "Production investigation of transaction failures, HTTP responses, account states, webhooks and inconsistent API behaviour.",
-    technologies: "APIs · Webhooks · Payments"
+      "Investigated payment and API issues involving transaction failures, HTTP responses, account states, webhook delivery, authentication, and inconsistent production behaviour.",
+    technologies: "Payment APIs · Webhooks · Troubleshooting"
   },
   {
     number: "03",
     title: "Backend Reliability",
     description:
-      "Production-focused reliability patterns including Redis TTL, cooldowns, OTP fallback logic, rate limiting and server-side tracking.",
+      "Implemented reliability mechanisms including Redis TTLs, rate limiting, cooldowns, OTP fallback logic, and server-side tracking to improve application resilience and operational visibility.",
     technologies: "Redis · AWS · Node.js"
   }
 ];
 
 function App() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
@@ -68,6 +70,7 @@ function App() {
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
         >
           ☰
         </button>
@@ -111,18 +114,20 @@ function App() {
           <div className="hero-content">
 
             <p className="eyebrow">
-              SENIOR BACKEND DEVELOPER · DOHA, QATAR
+              TECHNICAL SUPPORT SPECIALIST · FINTECH · DOHA, QATAR
             </p>
 
             <h1>
-              Building reliable
-              <span> backend systems.</span>
+              Engineering, troubleshooting,
+              <span> and solving complex problems.</span>
             </h1>
 
             <p className="hero-description">
-              Backend engineer focused on APIs, payment
-              integrations, scalable services, cloud infrastructure
-              and production support.
+              Software engineer with professional experience across
+              backend development, API integrations, cloud
+              infrastructure, and production systems. Now specializing
+              in payment technology, technical support, and API-driven
+              financial solutions.
             </p>
 
             <div className="hero-buttons">
@@ -159,25 +164,27 @@ function App() {
             </div>
 
             <pre>
-              <code>
-{`const engineer = {
+              <code>{`const engineer = {
 
   name: "Bivhor Nirola",
 
-  role: "Senior Backend Developer",
+  role: "Technical Support Specialist",
 
-  focus: [
-    "Backend",
-    "APIs",
-    "Payments",
-    "Cloud"
+  background: [
+    "Backend Engineering",
+    "API Integrations",
+    "Cloud Infrastructure",
+    "Production Systems"
   ],
 
-  stack:
-    "Node.js · Java · AWS"
+  focus: [
+    "Payment Technology",
+    "Technical Support",
+    "APIs",
+    "Reliability"
+  ]
 
-};`}
-              </code>
+};`}</code>
             </pre>
 
           </div>
@@ -197,22 +204,36 @@ function App() {
           </p>
 
           <h2>
-            Engineering with a
-            <span> production mindset.</span>
+            Engineering experience with a
+            <span> problem-solving mindset.</span>
           </h2>
 
           <div className="about-grid">
 
             <p>
-              I'm a software engineer with experience across
-              backend development, API integrations, cloud
-              infrastructure and technical support.
+              I'm a software engineer with professional experience
+              building and supporting backend systems, APIs, databases,
+              and cloud infrastructure.
             </p>
 
             <p>
-              I enjoy solving complex production problems,
-              improving reliability and turning business
-              requirements into maintainable systems.
+              Throughout my career, I've worked close to production —
+              developing services, integrating systems, investigating
+              failures, and resolving issues that directly impact users
+              and business operations.
+            </p>
+
+            <p>
+              I'm now bringing that engineering foundation into FinTech
+              and payment technology, with a focus on API integrations,
+              transaction processing, webhooks, troubleshooting, and
+              reliable technical support.
+            </p>
+
+            <p>
+              My approach is simple: understand the problem, identify
+              the root cause, communicate clearly, and deliver a
+              reliable solution.
             </p>
 
           </div>
@@ -233,12 +254,46 @@ function App() {
 
           <div className="timeline">
 
+            {/* VoPay */}
+
             <article className="experience">
 
               <div>
 
                 <small>
-                  2025 — PRESENT
+                  SEP 2026 — PRESENT
+                </small>
+
+                <h3>
+                  Technical Support Specialist
+                </h3>
+
+                <h4>
+                  VoPay · Doha, Qatar
+                </h4>
+
+              </div>
+
+              <p>
+                Supporting payment technology and merchant integrations
+                across APIs, transactions, webhooks, authentication,
+                and production systems. Investigating technical issues,
+                identifying root causes, and working toward reliable
+                resolutions for complex payment and integration
+                problems.
+              </p>
+
+            </article>
+
+
+            {/* Rafeeq */}
+
+            <article className="experience">
+
+              <div>
+
+                <small>
+                  AUG 2025 — AUG 2026
                 </small>
 
                 <h3>
@@ -252,21 +307,25 @@ function App() {
               </div>
 
               <p>
-                Backend development for super-app experiences
-                including food, grocery, events and ride-hailing.
-                Built APIs, booking logic, database-driven features,
-                search and operational tracking.
+                Developed and supported backend services for a
+                large-scale super-app covering food delivery, grocery,
+                events, and ride-hailing. Built REST APIs, booking
+                workflows, database-driven features, search
+                functionality, and production solutions focused on
+                reliability and performance.
               </p>
 
             </article>
 
+
+            {/* News Corp */}
 
             <article className="experience">
 
               <div>
 
                 <small>
-                  PREVIOUS
+                  PREVIOUS EXPERIENCE
                 </small>
 
                 <h3>
@@ -280,39 +339,59 @@ function App() {
               </div>
 
               <p>
-                Software engineering and production support across
-                backend services, APIs, databases and operational
-                systems.
+                Worked on enterprise software and production systems
+                across backend services, APIs, databases, and
+                operational environments. Contributed to application
+                development, system reliability, troubleshooting, and
+                production support.
               </p>
 
             </article>
 
+          </div>
 
-            <article className="experience">
+        </section>
 
-              <div>
 
-                <small>
-                  PAYMENT TECHNOLOGY
-                </small>
+        {/* CAREER EVOLUTION */}
 
-                <h3>
-                  Technical Support · Payments
-                </h3>
+        <section className="section section-container">
 
-                <h4>
-                  VoPay
-                </h4>
+          <p className="eyebrow">
+            03 · CAREER EVOLUTION
+          </p>
 
-              </div>
+          <h2>
+            From building systems to
+            <span> solving the problems behind them.</span>
+          </h2>
 
-              <p>
-                Payment technology, API troubleshooting, webhooks,
-                transaction lifecycles, authentication, idempotency
-                and merchant integrations.
-              </p>
+          <div className="about-grid">
 
-            </article>
+            <p>
+              My career began with software engineering and backend
+              development, where I built a strong foundation in
+              application architecture, APIs, databases, and cloud
+              technologies.
+            </p>
+
+            <p>
+              Working with production systems taught me something
+              equally important: understanding how systems behave when
+              things don't go as planned.
+            </p>
+
+            <p>
+              That experience naturally led me toward troubleshooting,
+              production support, API operations, and now payment
+              technology.
+            </p>
+
+            <p>
+              Today, I combine software engineering knowledge with
+              technical problem-solving to understand issues at their
+              source rather than simply treating the symptoms.
+            </p>
 
           </div>
 
@@ -327,7 +406,7 @@ function App() {
         >
 
           <p className="eyebrow">
-            03 · TOOLKIT
+            04 · TECHNICAL TOOLKIT
           </p>
 
           <h2>
@@ -355,7 +434,7 @@ function App() {
         >
 
           <p className="eyebrow">
-            04 · SELECTED WORK
+            05 · SELECTED WORK
           </p>
 
           <div className="projects">
@@ -392,53 +471,73 @@ function App() {
         </section>
 
 
-        {/* STRENGTHS */}
+        {/* CORE EXPERTISE */}
 
         <section className="section section-container">
 
           <p className="eyebrow">
-            05 · WHAT I BRING
+            06 · CORE EXPERTISE
           </p>
 
           <div className="strengths">
 
             <div>
               <strong>
-                APIs
+                Payment Technology
               </strong>
 
               <span>
-                Design & troubleshooting
+                Transactions · APIs · Webhooks · Merchant Integrations
               </span>
             </div>
 
             <div>
               <strong>
-                Payments
+                Technical Support
               </strong>
 
               <span>
-                Transaction lifecycle
+                Troubleshooting · Root-Cause Analysis · Incident Resolution
               </span>
             </div>
 
             <div>
               <strong>
-                Cloud
+                Backend Engineering
               </strong>
 
               <span>
-                AWS & DevOps
+                Node.js · Java · PHP · REST APIs
               </span>
             </div>
 
             <div>
               <strong>
-                Support
+                Cloud & Infrastructure
               </strong>
 
               <span>
-                Production problem solving
+                AWS · Docker · Kubernetes · Terraform
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                Databases & Caching
+              </strong>
+
+              <span>
+                PostgreSQL · MySQL · MongoDB · Redis
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                Production Reliability
+              </strong>
+
+              <span>
+                Monitoring · Debugging · Performance · System Reliability
               </span>
             </div>
 
@@ -455,17 +554,20 @@ function App() {
         >
 
           <p className="eyebrow">
-            06 · CONTACT
+            07 · CONTACT
           </p>
 
           <h2>
-            Let's build something
-            <span> reliable.</span>
+            Let's solve
+            <span> complex technical problems.</span>
           </h2>
 
           <p className="hero-description">
-            Open to backend engineering, technical support and
-            API/payment technology opportunities.
+            I’m interested in payment technology, API integrations,
+            backend systems, technical support, and production
+            engineering — especially where strong technical
+            understanding can turn complex problems into simple,
+            reliable solutions.
           </p>
 
           <div className="contact-links">
@@ -483,7 +585,7 @@ function App() {
             </a>
 
             <a
-              href="https://github.com/"
+              href="https://github.com/bivhor"
               target="_blank"
               rel="noreferrer"
             >
@@ -497,11 +599,13 @@ function App() {
       </main>
 
 
+      {/* FOOTER */}
+
       <footer>
 
         © {new Date().getFullYear()}
         {" "}
-        Bivhor Nirola · Built with React & TypeScript
+        Bivhor Nirola · React & TypeScript
 
       </footer>
 
